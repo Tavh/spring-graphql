@@ -1,0 +1,17 @@
+input UserDetailsInput {
+    id: ID
+    name: String!
+}
+
+type UserDetails {
+    id: ID!
+    name: String!
+}
+
+type Mutation {
+    saveUserDetails(userDetails: UserDetailsInput!): UserDetails!
+}
+
+type Query {
+    userDetailsById(id: ID!): UserDetails!
+}
